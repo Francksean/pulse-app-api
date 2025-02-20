@@ -39,8 +39,10 @@ public class AppointmentService {
     }
 
     public Appointment updateAppointmentStatus(Long appointmentId, AppointmentStatus appointmentStatus) {
-        return appointmentRepository.updateFirstById(appointmentId, appointmentStatus);
-    }
+        Appointment appointment = appointmentRepository.findById(appointmentId)
+                .orElseThrow(() -> new RuntimeException("Appointment not found"));
+        appointment.setStatus(appointmentStatus);
+        return appointmentRepository.save(appointment);    }
 
     public Appointment getAppointmentById(Long id){
         return appointmentRepository.findById(id).orElse(null);

@@ -8,7 +8,7 @@ import org.example.pulseappapi.donation.enums.DonationType;
 
 @Data
 @Entity
-@Table(name = "blood_donation")
+@Table(name = "donations")
 public class Donation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

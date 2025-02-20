@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
-@Entity
+@Entity(name = "campaigns")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -33,7 +33,7 @@ public class Campaign {
         @JoinColumn(name = "center_id", nullable = false)
         private Center center;
 
-        @OneToMany(mappedBy = "donations")
+        @OneToMany(mappedBy = "campaign")
         private List<Donation> donations;
 
         @Column(nullable = false)

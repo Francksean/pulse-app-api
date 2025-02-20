@@ -10,7 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 
 @Data
-@Entity
+@Entity(name = "emails")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Email {
@@ -18,9 +18,9 @@ public class Email {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private String from;
+    private String sender;
     @Column
-    private String to;
+    private String receiver;
     @Column
     private String subject;
     @Column

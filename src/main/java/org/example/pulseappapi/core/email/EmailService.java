@@ -29,8 +29,8 @@ public class EmailService {
             Email email = new Email();
             email.setSubject(subject);
             email.setBody(body);
-            email.setTo(to);
-            email.setFrom(from);
+            email.setReceiver(to);
+            email.setSender(from);
             emailRepository.save(email);
             System.out.println("Email envoyé avec succès à " + to);
         } catch (MessagingException e) {

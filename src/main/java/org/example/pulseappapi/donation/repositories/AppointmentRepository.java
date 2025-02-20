@@ -23,11 +23,4 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
      * @param pageable
      */
     public Page<Appointment> findFirstByCenter_Id(Long donorId, Pageable pageable);
-
-    /**
-     *
-     * @param donorId
-     * @param status
-     */
-    public Appointment updateFirstById(Long donorId, AppointmentStatus status);
 }

@@ -14,7 +14,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "center")
+@Table(name = "centers")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Center {
@@ -52,13 +52,13 @@ public class Center {
     @ElementCollection
     private List<String> documentUrls;
 
-    @OneToMany(mappedBy = "centers", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "center", cascade = CascadeType.ALL)
     private List<Campaign> campaigns;
 
-    @OneToMany(mappedBy = "appointments", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "center", cascade = CascadeType.ALL)
     private List<Appointment> appointments;
 
-    @OneToMany(mappedBy = "notifications", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "center", cascade = CascadeType.ALL)
     private List<Notification> notifications;
 
     @Column(name = "center_logo")

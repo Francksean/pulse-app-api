@@ -70,11 +70,11 @@ public class User implements UserDetails {
     private UserRole role;
 
     @Column
-    @OneToMany(mappedBy = "donation")
+    @OneToMany(mappedBy = "donor")
     private List<Donation> donations;
 
     @Column
-    @OneToMany(mappedBy = "appointment")
+    @OneToMany(mappedBy = "donor")
     private List<Appointment> appointments;
 
     @CreationTimestamp
@@ -111,5 +111,15 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    @Override
+    public String getUsername() {
+        return this.username;
+    }
+
+    @Override
+    public String getPassword() {
+        return this.password;
     }
 }
