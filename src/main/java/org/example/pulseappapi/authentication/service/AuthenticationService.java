@@ -1,9 +1,9 @@
 package org.example.pulseappapi.authentication.service;
 
-import org.example.pulseappapi.authentication.DTO.LoginDTO;
-import org.example.pulseappapi.authentication.DTO.RegisterDTO;
-import org.example.pulseappapi.authentication.models.User;
-import org.example.pulseappapi.authentication.repositories.UserRepository;
+import org.example.pulseappapi.authentication.DTOs.LoginDTO;
+import org.example.pulseappapi.authentication.DTOs.RegisterDTO;
+import org.example.pulseappapi.core.user.models.User;
+import org.example.pulseappapi.core.user.repositories.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;

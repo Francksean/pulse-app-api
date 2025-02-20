@@ -1,6 +1,6 @@
 package org.example.pulseappapi.authentication.configs;
 
-import org.example.pulseappapi.authentication.repositories.UserRepository;
+import org.example.pulseappapi.core.user.repositories.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
