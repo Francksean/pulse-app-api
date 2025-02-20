@@ -1,6 +1,7 @@
 package org.example.pulseappapi.donation.service;
 
 import org.example.pulseappapi.center_management.models.Center;
+import org.example.pulseappapi.center_management.repository.CenterRepository;
 import org.example.pulseappapi.core.user.models.User;
 import org.example.pulseappapi.core.user.repositories.UserRepository;
 import org.example.pulseappapi.donation.DTOs.CreateAppointmentDTO;
